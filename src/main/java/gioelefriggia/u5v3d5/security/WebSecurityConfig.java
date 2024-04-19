@@ -24,13 +24,12 @@ public class WebSecurityConfig {
                         .requestMatchers("/public/").permitAll()  // Accesso libero a tutti
                         .requestMatchers("/user/").hasRole("USER")  // Solo gli utenti normali
                         .requestMatchers("/admin/**").hasRole("ADMIN")  // Solo gli organizzatori di eventi
-                        .anyRequest().authenticated())  // Tutte le altre richieste autenticate
-                // Disabilita il contesto di sicurezza se non utilizzato
+                        .anyRequest().authenticated())
+
                 .securityContext(context -> context.disable())
-                // Disabilita la cache delle richieste se non utilizzata
+
                 .requestCache(cache -> cache.disable())
-                // Lascia la configurazione degli header di default per evitare deprecazioni
-                // Disabilita la gestione predefinita del logout
+
                 .logout(logout -> logout.disable());
 
         return http.build();
