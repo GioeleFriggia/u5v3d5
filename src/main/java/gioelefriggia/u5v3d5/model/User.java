@@ -1,7 +1,7 @@
 package gioelefriggia.u5v3d5.model;
 
 import lombok.Data;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
