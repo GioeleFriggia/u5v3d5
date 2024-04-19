@@ -30,8 +30,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestParam String username, @RequestParam String password) {
-        // Implementazione del login
-        // Nota: Spring Security normalmente gestisce il login, quindi potrebbe non essere necessario implementarlo manualmente a meno che non ci siano requisiti specifici
+
         return new ResponseEntity<>("Login endpoint to be implemented", HttpStatus.OK);
     }
 }
