@@ -39,5 +39,5 @@ public class Booking {
         this.numberOfSeats = numberOfSeats;
     }
 
-  
+
 }
